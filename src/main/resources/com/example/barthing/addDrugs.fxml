@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import org.kordamp.ikonli.javafx.*?>
+
+<BorderPane prefHeight="500" prefWidth="500" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.barthing.addDrug">
+    <center>
+        <VBox alignment="CENTER" fillWidth="false" spacing="20">
+            <HBox spacing="10">
+                <Label text="Name:" />
+                <TextField fx:id="drugName" />
+            </HBox>
+            <HBox prefHeight="26.0" spacing="10">
+                <Label text="Price:" />
+                <TextField fx:id="drugPrice" />
+            </HBox>
+            <HBox spacing="10">
+                <Label text="Count:" />
+                <TextField fx:id="drugCount" />
+            </HBox>
+            <Button mnemonicParsing="false" onAction="#addDrug" prefWidth="200.0" text="Add Drug">
+                <graphic>
+                    <FontIcon iconLiteral="fas-plus" iconSize="16" />
+                </graphic>
+            </Button>
+
+            <Button mnemonicParsing="false" onAction="#goBack" prefWidth="200.0" text="Go Back">
+                <graphic>
+                    <FontIcon iconLiteral="fas-laptop" iconSize="16" />
+                </graphic>
+            </Button>
+            <Label fx:id="errorMsg" text="Input is not Valid" visible="false" />
+        </VBox>
+    </center>
+</BorderPane>

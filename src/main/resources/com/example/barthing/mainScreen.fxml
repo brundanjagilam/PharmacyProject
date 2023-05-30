@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import org.kordamp.ikonli.javafx.*?>
+
+<VBox alignment="TOP_CENTER" prefHeight="500" prefWidth="500" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.barthing.mainController">
+    <TableView fx:id="table" maxHeight="-Infinity" prefHeight="300.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+        <columns>
+            <TableColumn fx:id="Id" prefWidth="75.0" text="Id" />
+            <TableColumn fx:id="Name" prefWidth="100.0" text="Name" />
+            <TableColumn fx:id="Price" prefWidth="100.0" text="Price" />
+            <TableColumn fx:id="Amount" prefWidth="100.0" text="Amount" />
+            <TableColumn fx:id="Btn" prefWidth="100.0" text="Delete" />
+        </columns>
+      <columnResizePolicy>
+         <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+      </columnResizePolicy>
+    </TableView>
+    <Button mnemonicParsing="false" onAction="#addDrugBtn" prefWidth="200.0" text="Add Drug">
+        <graphic>
+            <FontIcon iconLiteral="fas-plus" iconSize="16" />
+        </graphic>
+      <VBox.margin>
+         <Insets />
+      </VBox.margin>
+    </Button>
+    <Button mnemonicParsing="false" onAction="#Refresh" prefWidth="200.0" text="Refresh List">
+        <graphic>
+            <FontIcon iconLiteral="fas-laptop" iconSize="16" />
+        </graphic>
+    </Button>
+    <Button mnemonicParsing="false" onAction="#Search" prefWidth="200.0" text="Search">
+        <graphic>
+            <FontIcon iconLiteral="fas-crosshairs" iconSize="16" />
+        </graphic>
+    </Button>
+   <padding>
+      <Insets left="20.0" right="20.0" />
+   </padding>
+</VBox>

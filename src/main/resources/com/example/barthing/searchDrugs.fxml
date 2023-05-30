@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import org.kordamp.ikonli.javafx.*?>
+
+<VBox alignment="CENTER" prefHeight="500" prefWidth="500" spacing="20" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.barthing.searchController">
+    <TableView fx:id="table" maxHeight="-Infinity" prefHeight="300.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+        <columns>
+            <TableColumn fx:id="Id" prefWidth="75.0" text="Id" />
+            <TableColumn fx:id="Name" prefWidth="100.0" text="Name" />
+            <TableColumn fx:id="Price" prefWidth="100.0" text="Price" />
+            <TableColumn fx:id="Amount" prefWidth="100.0" text="Amount" />
+            <TableColumn fx:id="Btn" prefWidth="100.0" text="Delete" />
+        </columns>
+        <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+        </columnResizePolicy>
+    </TableView>
+
+    <VBox alignment="CENTER" spacing="10">
+        <Label text="Search By:" />
+        <ChoiceBox fx:id="searchCategory" value="Name">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Name" />
+                    <String fx:value="ID" />
+                    <String fx:value="Price" />
+                    <String fx:value="Count" />
+                </FXCollections>
+            </items>
+        </ChoiceBox>
+
+        <HBox maxWidth="280.0" spacing="10">
+            <Label text="Search Query:" />
+            <TextField fx:id="searchQuery" />
+        </HBox>
+
+        <Button mnemonicParsing="false" onAction="#Search" prefWidth="200.0" text="Search">
+            <graphic>
+                <FontIcon iconLiteral="fas-crosshairs" iconSize="16" />
+            </graphic>
+        </Button>
+
+        <Button mnemonicParsing="false" onAction="#goBack" prefWidth="200.0" text="Go Back">
+            <graphic>
+                <FontIcon iconLiteral="fas-laptop" iconSize="16" />
+            </graphic>
+        </Button>
+    </VBox>
+</VBox>
